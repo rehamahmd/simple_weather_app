@@ -148,4 +148,4 @@ The feature directory organizes code related to a specific part of the app. Here
 
 
 By: [Reham Ahmed](https://www.linkedin.com/in/rehamahmedibrahim/)
-# simple_weather_app
+
