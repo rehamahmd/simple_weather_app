@@ -48,14 +48,13 @@ class NetworkHelper {
       final Response response = await dio.get(path, queryParameters: queryParameters);
       return response;
     } on DioException catch (ex, st) {
-      print("aaaa");
       throw await NetworkExceptionsHandler.handelException(ex, st);
     } catch (e) {
       throw OperationException();
     }
   }
 
-  Future<dynamic> post(
+  Future<Response> post(
     url, {
     dynamic body,
     Map<String, dynamic>? queryParameters,
@@ -72,7 +71,7 @@ class NetworkHelper {
     }
   }
 
-  Future<dynamic> patch(
+  Future<Response> patch(
     url, {
     Map<String, String>? headers,
     dynamic body,
@@ -89,7 +88,7 @@ class NetworkHelper {
     }
   }
 
-  Future<dynamic> delete(
+  Future<Response> delete(
     String url, {
     Map<String, String>? headers,
     Map<String, dynamic>? queryParameters,
